@@ -90,7 +90,7 @@ def validate(settings):
             print("Validating Root Patch File integrity")
             if not Path(settings.payload_local_binaries_root_path).exists():
                 subprocess.run(["ditto", "-V", "-x", "-k", "--sequesterRsrc", "--rsrc", settings.payload_local_binaries_root_path_zip, settings.payload_path], stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-            for supported_os in [os_data.os_data.big_sur, os_data.os_data.monterey]:
+            for supported_os in [os_data.os_data.big_sur, os_data.os_data.monterey, os_data.os_data.ventura]:
                 validate_root_patch_files(supported_os, 6)
             print("Validating SNB Board ID patcher")
             settings.computer.reported_board_id = "Mac-7BA5B2DFE22DDD8C"
