@@ -991,7 +991,9 @@ system_profiler SPHardwareDataType | grep 'Model Identifier'
 
         no_patch = False
         no_unpatch = False
-        if self.constants.detected_os == os_data.os_data.monterey:
+        if self.constants.detected_os == os_data.os_data.ventura:
+            print(MenuOptions.monterey)
+        elif self.constants.detected_os == os_data.os_data.monterey:
             print(MenuOptions.monterey)
         elif self.constants.detected_os == os_data.os_data.big_sur:
             print(MenuOptions.big_sur)
