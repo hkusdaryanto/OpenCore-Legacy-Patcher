@@ -150,7 +150,7 @@ class Constants:
         self.disable_cs_lv = False  #     Disable Library validation
 
         ## OS Settings
-        self.os_support = 12.0
+        self.os_support = 13.0
         self.detected_os = 0  #        Major Kernel Version
         self.detected_os_minor = 0  #  Minor Kernel Version
         self.detected_os_build = ""  # OS Build
@@ -199,6 +199,7 @@ class Constants:
         self.legacy_accel_support = [
             os_data.os_data.big_sur,
             os_data.os_data.monterey,
+            os_data.os_data.ventura,
         ]
 
     # Payload Location
